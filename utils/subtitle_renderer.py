@@ -772,7 +772,9 @@ class SubtitleRenderer:
                 '-i', source_video,
                 '-map', '0:v:0',
                 '-map', '1:a:0?',
-                '-c:v', 'copy',
+                '-c:v', 'libx264',
+                '-preset', 'fast',
+                '-crf', '18',
                 '-c:a', 'aac',
                 '-shortest',
                 '-y',  # 覆盖输出文件
